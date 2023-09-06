@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org/">
+<head>
+    <title>SPRING BOOT SECURITY</title>
+    <style>
+        /* Center the content on the page */
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh; /* Make the page full height */
+            margin: 0;
+            background-color: #f4f4f4; /* Background color for the page */
+        }
+
+        /* Style the line with larger font size */
+        .welcome-line {
+            text-align: center;
+            font-size: 24px; /* Increase font size for the line */
+            margin: 20px 0; /* Add some margin for spacing */
+        }
+
+        /* Style the header with larger font size */
+        header {
+            text-align: center;
+            font-size: 24px; /* Increase font size for the header */
+            margin: 20px 0; /* Add some margin for spacing */
+            border-bottom: 2px solid #007bff; /* Add a border under the header */
+            padding-bottom: 10px; /* Add space between header and buttons */
+        }
+
+        /* Add CSS styles to make links look like buttons */
+        .button {
+            padding: 15px 30px; /* Larger padding for bigger buttons */
+            font-size: 16px; /* Increase font size for buttons */
+            background-color: #007bff; /* Button color */
+            color: #fff; /* Text color */
+            text-decoration: none; /* Remove underlines from links */
+            border: none; /* Remove border */
+            border-radius: 5px; /* Rounded corners */
+            cursor: pointer; /* Add pointer cursor on hover */
+            margin: 10px; /* Add some spacing between buttons */
+            transition: background-color 0.3s ease; /* Smooth button hover effect */
+        }
+
+        /* Style the buttons on hover */
+        .button:hover {
+            background-color: #0056b3; /* Darker color on hover */
+        }
+
+        /* Place the login button below the other two buttons */
+        .login-button {
+            margin-top: 20px;
+        }
+
+        /* Add a container for the buttons */
+        .button-container {
+            text-align: center;
+        }
+
+        /* Style the product list button to be on the right */
+        .product-button {
+            margin-left: 10px; /* Add some spacing between buttons */
+        }
+    </style>
+</head>
+<body>
+<!-- Welcome line at the top of the page -->
+<div class="welcome-line">
+    <h1>WELCOME TO ADMIN PAGE....</h1>
+</div>
+<!-- Use the "button" class to style the links as buttons -->
+<div class="button-container">
+    <a th:href="@{/customer/all}" class="button">Customer Details</a>
+    <a th:href="@{/product/all}" class="button product-button">Product List</a>
+</div>
+<!-- Place the login button in the center below the other elements -->
+<a th:href="@{/logout}" class="button login-button">Logout</a>
+</body>
+</html>
